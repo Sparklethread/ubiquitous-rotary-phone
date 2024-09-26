@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>GUI Builder</h1>
+            <div id="gui-builder">
+                <button onclick="startAddingElement('button')">Add Button</button>
+                <button onclick="startAddingElement('text')">Add Text Input</button>
+                <button onclick="startAddingElement('label')">Add Label</button>
+                <button onclick="startAddingElement('checkbox')">Add Checkbox</button>
+                <button onclick="startAddingElement('radio')">Add Radio Button</button>
+                <button onclick="startAddingElement('dropdown')">Add Dropdown</button>
+                <button onclick="startAddingElement('textarea')">Add Textarea</button>
+                <button onclick="startAddingElement('slider')">Add Slider</button>
+                <button onclick="startAddingElement('image')">Add Image</button>
+                <button onclick="generateScript()">Generate PowerShell Script</button>
+            </div>
+            <div id="gui-preview">
+                <h2>Preview</h2>
+                <div id="form-area">
+                    <div id="preview-area" onmousemove="followMouse(event)" onmouseup="placeElement(event)"></div>
+                </div>
+            </div>
+            <div id="generated-script">
+                <h2>Generated PowerShell Script</h2>
+                <pre id="script-output"></pre>
+                <button onclick="copyToClipboard()">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div id="form-properties">
+                <h2>Form Properties</h2>
+                <form id="form-properties-form">
+                    <label for="form-width">Width:</label>
+                    <input type="number" id="form-width" value="400" onchange="updateForm()"><br>
+                    <label for="form-height">Height:</label>
+                    <input type="number" id="form-height" value="300" onchange="updateForm()"><br>
+                </form>
+            </div>
+            <div id="element-properties">
+                <h2>Element Properties</h2>
+                <form id="properties-form">
+                    <label for="element-id">ID:</label>
+                    <input type="text" id="element-id" readonly><br>
+                    <label for="element-x">X:</label>
+                    <input type="number" id="element-x"><br>
+                    <label for="element-y">Y:</label>
+                    <input type="number" id="element-y"><br>
+                    <label for="element-width">Width:</label>
+                    <input type="number" id="element-width"><br>
+                    <label for="element-height">Height:</label>
+                    <input type="number" id="element-height"><br>
+                    <button type="button" onclick="updateElement()">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
