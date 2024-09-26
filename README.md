@@ -1,2 +1,2 @@
 # ubiquitous-rotary-phone
-Skapa Powershellgui med javascript
+Create Powershellgui with Javascript
