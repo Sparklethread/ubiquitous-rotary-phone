@@ -1,2 +1,2 @@
 # ubiquitous-rotary-phone
-Create Powershellgui with Javascript
+Create GUI for PowerShell with Javascript
